@@ -6,7 +6,8 @@ class Solution {
         while(l<=n){
             s=numbers[l]+numbers[r];
             if(s==target){
-                return new int[] {l+1,r+1};
+                // return new int[] {l+1,r+1};
+                break;
             }
             else if(s>target){
                 r--;
@@ -16,7 +17,7 @@ class Solution {
             }
 
         }
-        return new int[] {l,r};
+        return new int[] {l+1,r+1};
         
     }
 }
