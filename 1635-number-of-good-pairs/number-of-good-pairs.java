@@ -6,11 +6,12 @@ class Solution {
             hs.put(num,hs.getOrDefault(num,0)+1);
             
         }
-        int c=0,s=0;
+        int s=0;
         for(int nu:hs.keySet()){
-            if(hs.get(nu)>1){
+                           int ci=hs.get(nu);
 
-               int ci=hs.get(nu);
+            if(ci>1){
+
                s=s+ci*(ci-1)/2;
             }
         }
