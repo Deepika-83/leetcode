@@ -11,8 +11,7 @@ class Solution {
     }
     public int maxSum(int[] nums) {
         int n=nums.length;
-        int msum=0;
-        int c=0;
+        int msum=-1;
         HashMap<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<n;i++){
             int sum=0;
@@ -20,19 +19,14 @@ class Solution {
             if(map.containsKey(val)){
              sum=map.get(val)+nums[i];
             msum=Math.max(sum,msum);
-            map.replace(val,Math.max(map.get(val),nums[i]));
+            map.put(val,Math.max(map.get(val),nums[i]));
             }
             else{ 
                            map.put(val,nums[i]);
-                c++;
             }
-            
-
 
         }
-        if(c==n){
-            return -1;
-        }
+        
         return msum;
     }
 }
