@@ -1,18 +1,12 @@
 class Solution {
     public int[] applyOperations(int[] nums) {
         int n=nums.length;
-        int l=0,r=l+1;
-        while(r<n && l<n-1){
-            if(nums[l]==nums[r]){
-                nums[l]*=2;
-                nums[r]=0;
-                l=l+2;
-                r=r+2;
+        for(int i=0;i<n-1;i++){ 
+            if(nums[i]==nums[i+1]){
+                nums[i]*=2;
+                nums[i+1]=0;
             }
-            else{
-                l++;
-                r++;
-            }
+            
         }
         int lo=0,h;
         for(h=0;h<n;h++){
