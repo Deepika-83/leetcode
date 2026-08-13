@@ -4,7 +4,6 @@ class Solution {
         for(int r=0;r<nums.length;r++){
             if(nums[r]!=val){
                 c++;
-                int t=nums[l];
                 nums[l]=nums[r];
                 l++;
             }
