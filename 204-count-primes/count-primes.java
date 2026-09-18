@@ -5,9 +5,12 @@ class Solution {
         }
         int c=0;
         boolean[] arr=new boolean[n];
-        for(int i=2;i<n;i++){
-            arr[i]=true;
-        }
+        arr[0]=false;
+        arr[1]=false;
+        Arrays.fill(arr,true);
+        // for(int i=2;i<n;i++){
+        //     arr[i]=true;
+        // }
         for(int i=2;i*i<n;i++){
             if(arr[i]){
                 for(int j=i*i;j<n;j+=i){
