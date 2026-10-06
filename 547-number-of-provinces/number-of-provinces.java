@@ -24,8 +24,8 @@ class Solution {
             }
         }
             boolean[] b=new boolean[n];
-            dfs(graph,0,b);
-            int c=1;
+            // dfs(graph,0,b);
+            int c=0;
             for(int i=0;i<n;i++){
                 if(!b[i]){
                     c++;
